@@ -8,3 +8,5 @@ The demo contains:
 - dynamic graph (updated each 3s)
 - mouse hover reaction
 - aggregated nodes
+
+licese: Apache License 2.0
