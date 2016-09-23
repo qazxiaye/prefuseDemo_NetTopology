@@ -1,6 +1,6 @@
 This is a demo of [prefuse library](http://prefuse.org/).
 
-![](/images/NetTopology.jpg)
+![](images/NetTopology.gif)
 *demo_NetTopology*
 
 The demo contains:
