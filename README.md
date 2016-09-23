@@ -9,4 +9,4 @@ The demo contains:
 - mouse hover reaction
 - aggregated nodes
 
-licese: Apache License 2.0
+license: Apache License 2.0
