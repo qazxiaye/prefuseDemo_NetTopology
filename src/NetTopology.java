@@ -31,6 +31,7 @@ import java.util.Iterator;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.JRootPane;
 
 import prefuse.Constants;
 import prefuse.Display;
@@ -52,7 +53,6 @@ import prefuse.render.PolygonRenderer;
 import prefuse.render.Renderer;
 import prefuse.util.ColorLib;
 import prefuse.util.GraphicsLib;
-import prefuse.util.display.ExportDisplayAction;
 import prefuse.visual.AggregateItem;
 import prefuse.visual.AggregateTable;
 import prefuse.visual.EdgeItem;
@@ -89,17 +89,6 @@ public class NetTopology extends JPanel
         
         NetUpdater updater = new NetUpdater();
         updater.start();
-	}
-	
-	public static void main(String[] argv)
-	{
-		new DeviceGenerator("devices.xml");
-		
-		JFrame f = new JFrame();
-		f.add(new NetTopology());
-		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        f.pack();           
-		f.setVisible(true);
 	}
 	
 	private void setUpRenderers()
@@ -303,6 +292,18 @@ public class NetTopology extends JPanel
 			return result;
 		}
 	}
+	
+	public static void main(String[] argv)
+	{
+		new DeviceGenerator("devices.xml");
+		
+		JFrame f = new JFrame();
+		f.getRootPane().setWindowDecorationStyle(JRootPane.FRAME);
+		f.add(new NetTopology());
+		f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        f.pack();           
+		f.setVisible(true);
+	}
 }
 
 class HoverToolTip extends ControlAdapter
@@ -446,4 +447,4 @@ class AggregateLayout extends Layout
         pts[idx+4] = maxX; pts[idx+5] = minY;
         pts[idx+6] = maxX; pts[idx+7] = maxY;
     }
-} // end of class AggregateLayout
+}
