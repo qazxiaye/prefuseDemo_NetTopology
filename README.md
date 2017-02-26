@@ -3,6 +3,8 @@ This is a demo of [prefuse library](http://prefuse.org/).
 ![](images/NetTopology.gif)
 *demo_NetTopology*
 
+<br>
+
 Run:
 
  - `mvn test`
@@ -10,6 +12,8 @@ Run:
 or
 
  - `gradle run`
+
+<br>
 
 The demo contains:
 - customized layout (based on tree layout)
